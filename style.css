@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root {
+    --Cyan: hsl(179, 62%, 43%);
+    --Bright-Yellow: hsl(71, 73%, 54%);
+    
+    --Light-Gray: hsl(204, 43%, 93%);
+    --Grayish-Blue: hsl(218, 22%, 67%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Karla", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: var(--Light-Gray);
+}
+
+.mainBox {
+    display: grid;
+    grid-template-columns: 1 auto;
+    grid-template-rows: 3;
+    max-width: 375px;
+    padding: 4rem 2rem;
+    margin: 0 auto;
+}
+
+/* JOIN OUR COMMUNITY block */
+
+.joinBlock {
+    background-color: white;
+    padding: 2rem 1rem;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.joinTitle {
+    color: var(--Cyan);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.joinMidText {
+    color: var(--Bright-Yellow);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.joinBotText {
+    color: var(--Grayish-Blue);
+    line-height: 1.5rem;
+}
+
+/* MONTHLY SUBSCRIPTION block */
+
+.subscriptionBlock {
+    background-color: var(--Cyan);
+    padding: 2rem 1rem;
+}
+
+.subTitle {
+    color: var(--Light-Gray);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.subMidText {
+    color: var(--Light-Gray);
+    margin-bottom: 0.5rem;
+}
+
+.subMidText .bigDollar {
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.subMidText .pM {
+    position: relative;
+    top:-0.25rem;
+    left: 0.5rem;
+    color: hsl(204, 43%, 85%);
+}
+
+.subBotText {
+    color: var(--Light-Gray);
+    margin-bottom: 1rem;
+}
+
+.subButton .signButton {
+    background-color: var(--Bright-Yellow);
+    font-family: "Karla", sans-serif;
+    color: var(--Light-Gray);
+    border: 1px solid transparent;
+    border-radius: 3px;
+    width: 100%;
+    height: 3rem;
+    font-weight: 700;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+/* WHY US block */
+
+.whyUsBlock {
+    background-color: hsl(179, 62%, 45%); /*TO CHANGE FOR LIGHTER COLOR*/
+    padding: 2rem 1rem;
+}
+
+.whyTitle {
+    font-weight: 700;
+    color: var(--Light-Gray);
+    margin-bottom: 1rem;
+}
+
+.whyText {
+    color: hsl(204, 43%, 85%);
+}
+
+.whyText ul {
+    list-style-type: none;
+    line-height: 1.5rem;
+}
+
+/* FOOTER block */
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* 1000px SCREEN */
+@media (min-width: 1000px){
+    
+    .mainBox{
+        max-width: 700px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .joinBlock {
+        grid-column: 1/-1;
+        padding: 2rem 2rem;
+    }
+
+    .joinBlock .joinTitle {
+        font-size: 25px;
+    }
+
+    .subscriptionBlock {
+        padding: 2rem 2rem;
+    }
+
+    .subscriptionBlock .subTitle {
+        margin-bottom: 2rem;
+    }
+
+    .subscriptionBlock .subBotText {
+        margin-bottom: 3rem;
+    }
+
+    .whyUsBlock {
+        padding: 2rem 2rem;
+    }
+}
